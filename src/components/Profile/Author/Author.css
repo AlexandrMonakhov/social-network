@@ -1,0 +1,18 @@
+.content-author {
+  display: flex;
+  align-items: center;
+}
+
+.content-author__about {
+  margin-left: 30px;
+}
+
+.author__name {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content-author img {
+  width: 131px;
+}

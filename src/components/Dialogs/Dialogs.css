@@ -1,0 +1,18 @@
+.dialogs-wrapper {
+  display: flex;
+}
+
+.dialogs-user {
+  max-width: 250px;
+  position: relative;
+}
+
+.dialogs-user::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -40px;
+  height: 100%;
+  width: 4px;
+  background-color: #c3c3c360;
+}

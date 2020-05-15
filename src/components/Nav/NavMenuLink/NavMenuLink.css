@@ -1,0 +1,24 @@
+.nav-menu-link {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.nav-menu-link {
+  padding: 20px 10px;
+}
+
+.nav-menu-link:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.nav-menu-link:last-child {
+  margin-top: 30px;
+}
+
+.active {
+  color: #fff;
+  background-color: #046e3fb2;
+}
