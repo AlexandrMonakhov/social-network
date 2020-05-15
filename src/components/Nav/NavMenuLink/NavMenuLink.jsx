@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./NavMenuLink.css";
 import { NavLink } from "react-router-dom";
 
-const NavMenuLink = (props) => {
+const NavMenuLink = ({ path, menu }) => {
   return (
-    <NavLink to={props.path} className="nav-menu-link">
-      <li className="nav-menu-link__item">{props.menu}</li>
+    <NavLink to={path} className="nav-menu-link">
+      <li className="nav-menu-link__item">{menu}</li>
     </NavLink>
   );
 };
