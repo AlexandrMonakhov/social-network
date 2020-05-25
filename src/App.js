@@ -19,12 +19,12 @@ function App({ data }) {
         <Nav paths={data.links} />
         <section className="app-content">
           <Switch>
-            <Route path='/profile' render={() => <Profile />} />
+            <Route path='/profile' render={() => <Profile posts={data.posts} />} />
             <Route path='/dialogs' render={() => <Dialogs users={data.users} messages={data.messages} />} />
             <Route path='/news' render={() => <News />} />
             <Route path='/music' render={() => <Music />} />
             <Route path='/settings' render={() => <Settings />} />
-            <Route path='/friends' render={() => <Friends />} />
+            <Route path='/friends' render={() => <Friends friends={data.friends} />} />
             <Redirect from="/" to="/profile" />
           </Switch>
         </section>

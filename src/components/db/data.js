@@ -26,6 +26,19 @@ let data = {
       { path: "/settings", menu: "Настройки" },
       { path: "/friends", menu: "Друзья" }
     ],
+  posts: [
+    { id: 1, message: 'Я учу реакт!', like: 100, dislike: 10 },
+    { id: 2, message: 'Я тоже, как успехи?', like: 75, dislike: 11 },
+    { id: 3, message: 'А я лентяй!', like: 5, dislike: 70 },
+  ],
+  friends: [
+    { id: 1, name: 'Алексей К.' },
+    { id: 2, name: 'Иван И.' },
+    { id: 3, name: 'Андрей Ф.' },
+    { id: 4, name: 'Александр Н.' },
+    { id: 5, name: 'Елена Н.' },
+    { id: 6, name: 'Дарья Г.' },
+  ],
 
 };
 
