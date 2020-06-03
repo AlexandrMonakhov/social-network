@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./Friend.css";
 
-const Friend = (props) => {
-  console.log(props);
-
+const Friend = ({ friends }) => {
   return (
     <div className="firends-block">
       <img
@@ -11,7 +9,7 @@ const Friend = (props) => {
         alt="аватарка"
         className="friends__avatar"
       />
-      <span className="firends__name">{props.friends}</span>
+      <span className="firends__name">{friends.name}</span>
       <div className="dots"></div>
     </div>
   );

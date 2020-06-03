@@ -16,6 +16,10 @@
   margin-right: 25px;
 }
 
+.firends__name {
+  font-size: 18px;
+}
+
 .dots {
   position: absolute;
   top: 10px;

@@ -42,4 +42,25 @@ let data = {
 
 };
 
+
+export const addPosts = postMessage => {
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    like: 0,
+    dislike: 0
+  };
+  data.posts.push(newPost);
+};
+
+export const addMessages = message => {
+  let newMessage = {
+    id: 6,
+    name: 'Иван',
+    message: message
+  };
+  data.messages.push(newMessage);
+};
+
+
 export default data;

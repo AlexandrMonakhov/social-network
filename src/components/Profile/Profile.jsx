@@ -4,6 +4,13 @@ import Author from "./Author/Author";
 import "./Profile.css";
 
 const Profile = (props) => {
+  let newPost = React.createRef();
+
+  const addPost = () => {
+    let postText = newPost.current.value;
+    props.addPosts(postText);
+  };
+
   return (
     <>
       <Author
@@ -17,8 +24,14 @@ const Profile = (props) => {
       <div className="new-post">
         <h2>Мой пост:</h2>
         <div className="post-block">
-          <textarea placeholder="Ваш пост..." className="my-post"></textarea>
-          <button className="new-post__button">Отправить</button>
+          <textarea
+            placeholder="Ваш пост..."
+            className="my-post"
+            ref={newPost}
+          ></textarea>
+          <button className="new-post__button" onClick={addPost}>
+            Отправить
+          </button>
         </div>
       </div>
 

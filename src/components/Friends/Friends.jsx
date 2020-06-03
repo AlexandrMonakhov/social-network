@@ -7,8 +7,8 @@ const Friends = (props) => {
     <>
       <h1>Мои друзья</h1>
       <div className="friends-wrapper">
-        {props.friends.map((friend, i) => (
-          <Friend friends={friend.friends[i].name} />
+        {props.friends.map((friend) => (
+          <Friend friends={friend} />
         ))}
       </div>
     </>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Dialogs.css";
 import DialogsUser from "./DialogsUser/DialogsUser";
 import DialogsMessage from "./DialogsMessage/DialogsMessage";
+import DialogsController from "./DialogsController/DialogsController";
 
 const Dialogs = (props) => {
   let dialogsUser = props.users.map((user, key) => (
@@ -23,6 +24,7 @@ const Dialogs = (props) => {
         <ul className="dialogs-user">{dialogsUser}</ul>
         <ul className="dialogs-messages">{dialogsMessage}</ul>
       </div>
+      <DialogsController addMessages={props.addMessages} />
     </>
   );
 };

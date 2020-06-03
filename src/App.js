@@ -10,21 +10,20 @@ import Music from './components/Music/Music';
 import Friends from './components/Friends/Friends';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-function App({ data }) {
-
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Nav paths={data.links} />
+        <Nav paths={props.data.links} />
         <section className="app-content">
           <Switch>
-            <Route path='/profile' render={() => <Profile posts={data.posts} />} />
-            <Route path='/dialogs' render={() => <Dialogs users={data.users} messages={data.messages} />} />
+            <Route path='/profile' render={() => <Profile posts={props.data.posts} addPosts={props.addPosts} />} />
+            <Route path='/dialogs' render={() => <Dialogs users={props.data.users} messages={props.data.messages} addMessages={props.addMessages} />} />
             <Route path='/news' render={() => <News />} />
             <Route path='/music' render={() => <Music />} />
             <Route path='/settings' render={() => <Settings />} />
-            <Route path='/friends' render={() => <Friends friends={data.friends} />} />
+            <Route path='/friends' render={() => <Friends friends={props.data.friends} />} />
             <Redirect from="/" to="/profile" />
           </Switch>
         </section>
